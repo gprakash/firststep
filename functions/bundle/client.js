@@ -2,7 +2,8 @@ const ApolloClient = require('apollo-boost').ApolloClient;
 
 function createClient () {
         return new ApolloClient({
-        uri: "/.netlify/functions/graphql"
+        link: createHttpLink({ uri: "/.netlify/functions/graphql" }),
+        cache: new InMemoryCache(),
     });
 }
 
