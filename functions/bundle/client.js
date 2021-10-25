@@ -1,6 +1,6 @@
 const ApolloClient = require('apollo-boost').ApolloClient;
 const createHttpLink = require('apollo-link-http').createHttpLink;
-const fetch = require('node-fetch');
+const fetch = require('node-fetch').fetch;
 
 const link = createHttpLink({
     uri: '/.netlify/functions/graphql',
