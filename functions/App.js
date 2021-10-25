@@ -1,7 +1,5 @@
 // src/App.js
-const Boost = require('apollo-boost');
-const ApolloClient = Boost.DefaultClient;
+const { createClient } = require('./bundle/client')
 
-const client =   ApolloClient({
-  uri: "/.netlify/functions/graphql"
-});
+const client = createClient();
+
