@@ -14,7 +14,7 @@ const cache = new InMemoryCache({
 
 
 function createClient () {
-        return new ApolloClient({cache: new InMemoryCache(),link,});
+        return new ApolloClient({cache: cache,link,});
 }
 
 
