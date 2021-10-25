@@ -3,15 +3,12 @@ const createHttpLink = require('apollo-link-http').createHttpLink;
 
 const link = createHttpLink({
     uri: '/.netlify/functions/graphql',
-    credentials: 'same-origin'
+    fetch: fetch
   });
   
 
 function createClient () {
-        return new ApolloClient({
-        link: createHttpLink({ uri: "/.netlify/functions/graphql" }),
-        cache: new InMemoryCache(),
-    });
+        return new ApolloClient({cache: new InMemoryCache(),link,});
 }
 
 
