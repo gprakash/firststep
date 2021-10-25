@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 const link = createHttpLink({
     uri: '/.netlify/functions/graphql',
-    fetch: fetch as any
+    fetch: fetch
   });
   
 
